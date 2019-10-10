@@ -3,7 +3,7 @@ var firebaseConfig = {
     authDomain: "wallpaperapp-e686e.firebaseapp.com",
     databaseURL: "https://wallpaperapp-e686e.firebaseio.com",
     projectId: "wallpaperapp-e686e",
-    storageBucket: "",
+    storageBucket: "wallpaperapp-e686e.appspot.com",
     messagingSenderId: "1026808787258",
     appId: "1:1026808787258:web:c11715a9bba4edec10e003",
     measurementId: "G-JEF5C96KCQ"
@@ -30,11 +30,15 @@ $("#btn-login").click(function () {
 
 });
 
-function switchView(view){
+$("#btn-logout").click(function () {
+    firebase.auth().signOut();
+});
+
+function switchView(view) {
     $.get({
-        url:view,
+        url: view,
         cache: false,
-    }).then(function(data){
+    }).then(function (data) {
         $("#container").html(data);
     });
 }
