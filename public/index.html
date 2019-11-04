@@ -39,10 +39,11 @@
     <script>
 
         firebase.auth().onAuthStateChanged(function (user) {
-            if (user) {
+             if (user) {
+                 window.localStorage.setItem('email', user.email);
                 window.location.href = "admin.html";
             }
-        });
+        });//sbhattacharyya3001@gmail.com
 
     </script>
 

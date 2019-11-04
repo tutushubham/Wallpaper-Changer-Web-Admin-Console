@@ -17,7 +17,7 @@ $("#btn-login").click(function () {
 
     var email = $("#email").val();
     var password = $("#password").val();
-
+    
     var result = firebase.auth().signInWithEmailAndPassword(email, password);
 
     result.catch(function (error) {

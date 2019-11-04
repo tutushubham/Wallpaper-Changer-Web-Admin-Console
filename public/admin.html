@@ -26,7 +26,7 @@
             <div class="dropdown navbar-right">
                 <button id="user-email" class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    tutushubham@gmail.com
+                    Email
                 </button>
                 <div class="dropdown-menu" aria-labelledby="user-email">
                     <a class="dropdown-item" id="btn-logout" href="#">
@@ -68,6 +68,11 @@
             }
         });
 
+        $("#user-email").text(window.localStorage.getItem('email'));
+
+    </script>
+    <script>
+    
     </script>
 </body>
 
